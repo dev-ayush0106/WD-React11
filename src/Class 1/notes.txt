@@ -1,0 +1,29 @@
+jsx : javascript extensible : html & javascript 
+
+jsx cannot run directly we use a dependency named babel
+
+index.html (id:root) ---> main.jsx(getElementById) ---> App.jsx
+
+React : 2 Type of components
+: Class components : not in use : because it takes time to render and we hav to make functions manually
+: Function components : it is recommended to use this : we can use hooks & work fast
+
+FUNCTIONAL COMPONENTS
+
+Syntax:
+function ComponentName(){
+    js
+    return(
+        html
+    )
+}
+
+Import & Export 
+
+export : 2 types 
+: default export
+: named export
+
+How to write JS in HTML?
+I will use {}
+
