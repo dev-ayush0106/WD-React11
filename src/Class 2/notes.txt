@@ -1,0 +1,8 @@
+Pillars of React : Props , State , Hooks
+
+Props : Sharing or Transferring the data from parent to child 
+
+parent --> Child --> sub child --> sub child1 --> sub child 2
+
+State : State means which manage the state of a variable.
+let[value,setValue]=useState(value)
