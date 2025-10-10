@@ -10,6 +10,7 @@ import Java from './Children/Java'
 import Python from './Children/Python'
 import Da from './Children/Da'
 import Navbar from '../Navbar'
+import Student from './Student'
 
 const Routing = () => {
     let routes=createBrowserRouter([
@@ -71,6 +72,12 @@ const Routing = () => {
             path:"*",
             element:<>
                 <PageNotFound/>
+            </>
+        },
+        {
+            path:"/student/:id",
+            element:<>
+                <Student/>
             </>
         }
     ])

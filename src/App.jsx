@@ -6,6 +6,8 @@ import MainFile, { File1, File2, File3, File4, File5 } from './Class 1/ManyFiles
 import Second from './Class 2/Second'
 import UseState1 from './Class 3/UseState1'
 import Third from './Class 3/Third'
+import Fourth from './Class 4/Fourth'
+import Main from './Class 4/Main'
 
 function App() {
 
@@ -26,7 +28,10 @@ function App() {
 
     {/* Class 3 */}
     {/* <UseState1/> */}
-    <Third/>
+    {/* <Third/> */}
+
+    {/* Class 4 */}
+    <Main/>
     </>
   )
 }
