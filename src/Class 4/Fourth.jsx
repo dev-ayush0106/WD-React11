@@ -3,12 +3,22 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const Fourth = () => {
+    let [products,setProducts]=useState([]);
     // What is API?
     // Application Programming Interface
 
     // fetch & axios
+    
+    // Pagination
+    let [current,setCurrent]=useState(0);
 
-    let url="https://dummyjson.com/products?limit=500"
+    let PAGE_SIZE=10
+    let start=current*PAGE_SIZE
+    let end=PAGE_SIZE+start
+
+    let noOfPages=Math.ceil(194/PAGE_SIZE)
+
+    let url=`https://dummyjson.com/products?limit=500`
 
     // useEffect() this is hook which used to manage the side effects of the website
 
@@ -22,7 +32,7 @@ const Fourth = () => {
 
     // useEffect(callback,dependency)
 
-    let [products,setProducts]=useState([]);
+    
 
     // function dataFetch(){
     //     fetch(url) // promise : then & catch
@@ -42,11 +52,12 @@ const Fourth = () => {
         let all=await axios.get(url)
         let data=all.data.products
         setProducts(data)
+        console.log(all.data.total)
     }
 
     useEffect(()=>{
         dataFetch()
-    },[])
+    },[noOfPages])
 
     console.log(products);
 
@@ -56,14 +67,6 @@ const Fourth = () => {
         navigate(`/products/${id}`)
     }
 
-    // Pagination
-    let [current,setCurrent]=useState(0);
-
-    let PAGE_SIZE=10
-    let start=current*PAGE_SIZE
-    let end=PAGE_SIZE+start
-
-    let noOfPages=Math.ceil(products.length/PAGE_SIZE)
   return (
     <>
     <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:"30px"}}>

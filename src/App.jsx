@@ -8,8 +8,16 @@ import UseState1 from './Class 3/UseState1'
 import Third from './Class 3/Third'
 import Fourth from './Class 4/Fourth'
 import Main from './Class 4/Main'
+import Form from './Class 5/Form'
+import Carousel from './Class 5/Carousel'
 
 function App() {
+
+  let images=[
+    "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp",
+    "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp",
+    "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp"
+  ]
 
   return (
     <>
@@ -31,7 +39,11 @@ function App() {
     {/* <Third/> */}
 
     {/* Class 4 */}
-    <Main/>
+    {/* <Main/> */}
+
+    {/* Class 5 */}
+    {/* <Form/> */}
+    <Carousel images={images}/>
     </>
   )
 }
