@@ -18,7 +18,7 @@ const Fourth = () => {
 
     let noOfPages=Math.ceil(194/PAGE_SIZE)
 
-    let url=`https://dummyjson.com/products?limit=500`
+    let url=`https://dummyjson.com/products?limit=${PAGE_SIZE}&skip=${PAGE_SIZE*current}`
 
     // useEffect() this is hook which used to manage the side effects of the website
 
@@ -57,7 +57,7 @@ const Fourth = () => {
 
     useEffect(()=>{
         dataFetch()
-    },[noOfPages])
+    },[current])
 
     console.log(products);
 
@@ -71,7 +71,7 @@ const Fourth = () => {
     <>
     <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:"30px"}}>
         {
-            products.slice(start,end).map((el)=>(
+            products.map((el)=>(
                 <div onClick={()=>{toNextPage(el.id)}} key={el.id} style={{width:"300px",border:"2px solid black",padding:"30px"}}>
                 <h2>{el.title}</h2>
                 <img src={el.thumbnail} alt="" />

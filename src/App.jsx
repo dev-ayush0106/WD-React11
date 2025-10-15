@@ -10,6 +10,7 @@ import Fourth from './Class 4/Fourth'
 import Main from './Class 4/Main'
 import Form from './Class 5/Form'
 import Carousel from './Class 5/Carousel'
+import Form1 from './Class 6/Form1'
 
 function App() {
 
@@ -39,11 +40,14 @@ function App() {
     {/* <Third/> */}
 
     {/* Class 4 */}
-    {/* <Main/> */}
+    <Main/>
 
     {/* Class 5 */}
     {/* <Form/> */}
-    <Carousel images={images}/>
+    {/* <Carousel images={images}/> */}
+
+    {/* Class 6 */}
+    {/* <Form1/> */}
     </>
   )
 }
