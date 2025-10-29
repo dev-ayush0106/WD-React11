@@ -13,6 +13,7 @@ import Carousel from './Class 5/Carousel'
 import Form1 from './Class 6/Form1'
 import Todo from './Class 7/Todo'
 import Todo1 from './Class 7/Todo1'
+import Eight from './Class 8/Eight'
 
 function App() {
 
@@ -53,7 +54,10 @@ function App() {
 
     {/* Class 7 */}
     {/* <Todo/> */}
-    <Todo1/>
+    {/* <Todo1/> */}
+
+    {/* Class 8 */}
+    <Eight/>
     </>
   )
 }
