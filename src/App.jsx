@@ -14,6 +14,7 @@ import Form1 from './Class 6/Form1'
 import Todo from './Class 7/Todo'
 import Todo1 from './Class 7/Todo1'
 import Eight from './Class 8/Eight'
+import Ninth from './Class 9/Ninth'
 
 function App() {
 
@@ -43,7 +44,7 @@ function App() {
     {/* <Third/> */}
 
     {/* Class 4 */}
-    {/* <Main/> */}
+    <Main/>
 
     {/* Class 5 */}
     {/* <Form/> */}
@@ -57,7 +58,10 @@ function App() {
     {/* <Todo1/> */}
 
     {/* Class 8 */}
-    <Eight/>
+    {/* <Eight/> */}
+
+    {/* Class 9 */}
+    {/* <Ninth/> */}
     </>
   )
 }

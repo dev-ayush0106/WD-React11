@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Fourth = () => {
     let [products,setProducts]=useState([]);
@@ -67,8 +68,14 @@ const Fourth = () => {
         navigate(`/products/${id}`)
     }
 
+    let cartProducts=useSelector((state)=>state.cart)
+    console.log(cartProducts)
   return (
     <>
+    <header style={{display:"flex",justifyContent:"space-between"}}>
+        <h1>Logo</h1>
+        <Link to="/cart"><h1>Cart {cartProducts.length}</h1></Link>
+    </header>
     <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:"30px"}}>
         {
             products.map((el)=>(

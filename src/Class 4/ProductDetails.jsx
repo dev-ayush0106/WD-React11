@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import { add } from './redux/cartSlicer/cartSlicer'
 
 const ProductDetails = () => {
     const [detail,setDetail]=useState({})
@@ -20,6 +22,11 @@ const ProductDetails = () => {
     },[])
 
     console.log(detail)
+
+    let dispatch=useDispatch()
+    function addToCart(data){
+      dispatch(add(data))
+    }
   return (
     <div>
       {
@@ -28,7 +35,7 @@ const ProductDetails = () => {
         <img src={detail.thumbnail} alt="" />
         <p>{detail.description}</p>
         <p>{detail.price}</p>
-        <button>Add to Cart</button>
+        <button onClick={()=>{addToCart(detail)}}>Add to Cart</button>
         </>
 
       }

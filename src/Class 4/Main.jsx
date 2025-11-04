@@ -2,6 +2,7 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Fourth from './Fourth'
 import ProductDetails from './ProductDetails'
+import Cart from './Cart'
 
 const Main = () => {
     let routes=createBrowserRouter([
@@ -16,6 +17,10 @@ const Main = () => {
             element:<>
             <ProductDetails/>
             </>
+        },
+        {
+          path:"/cart",
+          element:<Cart/>
         }
     ])
   return (
