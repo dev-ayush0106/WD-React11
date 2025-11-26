@@ -8,7 +8,7 @@ import { store } from './Class 4/redux/cartStore/cartStore.js'
 // import { store } from './Class 9/store/store.js'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <Provider store={store}>
 
    
@@ -27,5 +27,5 @@ createRoot(document.getElementById('root')).render(
       transition={Bounce}
     />
      </Provider>
-  </StrictMode>,
+  // </StrictMode>,
 )

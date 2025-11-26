@@ -15,6 +15,14 @@ import Todo from './Class 7/Todo'
 import Todo1 from './Class 7/Todo1'
 import Eight from './Class 8/Eight'
 import Ninth from './Class 9/Ninth'
+import Prac from './Practice/Prac'
+import HigherContext from './Context/Higher'
+import Tailwind from './Tailwind/Tailwind'
+import Project from './Project/Project'
+import SkeletonCard from './Project/SkeletonCard'
+import Popup from './Popup'
+import Model from './Model'
+import Slick from './Slick'
 
 function App() {
 
@@ -44,7 +52,7 @@ function App() {
     {/* <Third/> */}
 
     {/* Class 4 */}
-    <Main/>
+    {/* <Main/> */}
 
     {/* Class 5 */}
     {/* <Form/> */}
@@ -62,6 +70,19 @@ function App() {
 
     {/* Class 9 */}
     {/* <Ninth/> */}
+    {/* <HigherContext.Provider value="Ayush">
+    <Prac/>
+    </HigherContext.Provider>*/}
+
+    {/* <Tailwind/> */}
+
+    {/* <Project/> */}
+    {/* <SkeletonCard/> */}
+
+    {/* <Popup/> */}
+
+    <Slick/>
+    
     </>
   )
 }

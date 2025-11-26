@@ -1,16 +1,19 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { useParams } from 'react-router-dom'
-import { add } from './redux/cartSlicer/cartSlicer'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate, useParams } from 'react-router-dom'
+import { add, addToQty } from './redux/cartSlicer/cartSlicer'
 
 const ProductDetails = () => {
     const [detail,setDetail]=useState({})
     let{id}=useParams()
-
+    let cartItems=useSelector((state)=>state.cart)
     console.log(id)
 
     let url=`https://dummyjson.com/products/${id}`
+    console.log(cartItems)
+
+    let navigate=useNavigate()
 
     async function fetchDetail(){
         let data=await axios.get(url)
@@ -25,7 +28,15 @@ const ProductDetails = () => {
 
     let dispatch=useDispatch()
     function addToCart(data){
-      dispatch(add(data))
+      let item=cartItems.find((el)=>el.id===data.id);
+      if(item){
+        dispatch(addToQty(data.id))
+      }
+      else{
+        dispatch(add({...data,quantity:1}))
+      }
+
+      navigate("/")
     }
   return (
     <div>
